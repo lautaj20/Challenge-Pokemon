@@ -97,7 +97,6 @@ def index():
     if 'authenticated' not in session:
         return redirect('/register')
 
-    # ... (resto del código de autenticación)
 
     # Código HTML para el menú y formulario
     return '''
