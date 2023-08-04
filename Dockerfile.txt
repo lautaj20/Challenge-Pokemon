@@ -1,0 +1,9 @@
+FROM Python 3.11.4
+WORKDIR /app
+# Instalar las dependencias del archivo requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+COPY . .
+EXPOSE 5000
+CMD ["flask", "run", "--host=0.0.0.0"]
+docker build -t imgendocker.
+docker run -p 5000:5000 imgendocker
