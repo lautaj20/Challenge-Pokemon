@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pokémon API</title>
+</head>
+<body>
+    <h1>Pokémon API</h1>
+    <form action="/choose_function" method="POST">
+        <label for="function">Elige una función:</label>
+        <select id="function" name="function">
+            <option value="get_pokemon_type">Obtener el tipo de un Pokémon por su nombre</option>
+            <option value="random_pokemon_by_type">Obtener un Pokémon al azar de un tipo específico</option>
+        </select>
+        <br>
+        <div id="name_input" style="display:none;">
+            <label for="pokemon_name">Nombre del Pokémon:</label>
+            <input type="text" id="pokemon_name" name="pokemon_name">
+            <br>
+        </div>
+        <div id="type_input" style="display:none;">
+            <label for="pokemon_type">Tipo de Pokémon:</label>
+            <input type="text" id="pokemon_type" name="pokemon_type">
+            <br>
+        </div>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <script>
+        const functionSelect = document.getElementById("function");
+        const nameInput = document.getElementById("name_input");
+        const typeInput = document.getElementById("type_input");
+
+        functionSelect.addEventListener("change", function() {
+            const selectedFunction = functionSelect.value;
+
+            if (selectedFunction === "get_pokemon_type") {
+                nameInput.style.display = "block";
+                typeInput.style.display = "none";
+            } else if (selectedFunction === "random_pokemon_by_type") {
+                nameInput.style.display = "none";
+                typeInput.style.display = "block";
+            }
+        });
+    </script>
+</body>
+</html>
