@@ -11,6 +11,6 @@ Luego de utilizar una funcion, por favor reingresar al link original para utiliz
 
 La ultima version de la app es Poke2 pero pueden probar "links" tambien la cual tambien funciona pero mediante links
 ejemplo:
-http://localhost:5000/pokemon/type?name=pikachu
+http://localhost:5000/pokemon/type?name=pikachu o 
 http://localhost:5000/pokemon/random?type=flying
 
